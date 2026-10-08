@@ -89,12 +89,53 @@ section h3 {
 }
 
 .participants ul {
-  padding-left: 22px;
+  list-style: none;
 }
 
 .participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 4px;
+}
+
+.participant-email {
   overflow-wrap: anywhere;
+}
+
+.delete-participant {
+  flex: 0 0 auto;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #b3261e;
+  line-height: 0;
+}
+
+.delete-participant:hover:not(:disabled) {
+  background-color: #fdecea;
+  color: #8c1d18;
+}
+
+.delete-participant:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.delete-participant:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
+.delete-participant svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .participants-empty {
